@@ -2,17 +2,18 @@
     "run_context": {
         "niin_version": "5.0.0",
         "module": "oracle",
-        "config_hash": "sha256:2e9e3f2353185ebe19c5e73475fa1e1c44e9096399bb91981b01d48f2e0b0ee2",
+        "config_hash": "sha256:d7d8d942e496cb58563ba39a5cdea0f0289f4c7feb93391c7bc28bc44e305eb0",
         "config_version": "5.0.0",
         "features_active": [
+            "rolling_percentiles_5y",
             "hmm_fallback_available",
             "pipeline_latency_logging"
         ],
         "python_version": "3.11.15",
         "platform": "Linux",
-        "run_timestamp_utc": "2026-06-12T13:55:48.127206+00:00"
+        "run_timestamp_utc": "2026-06-12T14:25:16.717016+00:00"
     },
-    "timestamp": "2026-06-12T13:55:48.125860+00:00Z",
+    "timestamp": "2026-06-12T14:25:16.716970Z",
     "version": "NIIN_ORACLE_V5.0",
     "z_score": -0.3582,
     "z_score_raw": -0.1069,
@@ -46,7 +47,7 @@
         {
             "name": "System Stress (EWM)",
             "status": "NOMINAL",
-            "intensity": -0.12
+            "intensity": 0.0
         },
         {
             "name": "KNN Analog Confidence",
@@ -116,23 +117,23 @@
         "exclusion_window": 180
     },
     "dictamen_cuantitativo": {
-        "REGIMEN_ACTUAL": "Estado HMM: LOW_VOLATILITY. Flujo de capital estable. Régimen de baja volatilidad.",
+        "REGIMEN_ACTUAL": "Estado HMM: LOW_VOLATILITY. Flujo de capital estable. Régimen de bajo riesgo.",
         "ESTRES_SISTEMICO": "VIX: 19.44. Z-Score EWM: -0.3582σ. Riesgo de cola moderado.",
-        "CONTEXTO_HISTORICO": "Análogos históricos identificados: 2023-08-16, 2017-07-06, 2008-07-24, 2010-01-21, 2007-08-30. Comportamiento: Detección de anomalías estadísticas y crisis de liquidez.",
+        "CONTEXTO_HISTORICO": "Análogos históricos: 2023-08-16, 2017-07-06, 2008-07-24, 2010-01-21, 2007-08-30. Comportamiento: Detección de anomalías estadísticas y crisis de liquidez.",
         "CONFIANZA_KNN": "Confianza KNN: 0.909. Distancia media Mahalanobis: 3.96. Confianza alta.",
         "DICTAMEN_OPERATIVO": "MANTENER EXPOSICIÓN. RIESGO CONTROLADO.",
-        "SINTESIS_ESTRATEGICA": "Mantener exposición en régimen de baja volatilidad. Riesgo controlado y confianza alta en análogos históricos. Vigilancia continua del estres sistémico y flujo de capital."
+        "SINTESIS_ESTRATEGICA": "Mantener exposición con riesgo controlado. El régimen actual de bajo riesgo y el contexto histórico de anomalías estadísticas sugieren una estrategia de mantenimiento de posiciones. La confianza alta en los análogos históricos y la distancia media Mahalanobis apoyan esta decisión."
     },
-    "deep_analysis": "Mantener exposición en régimen de baja volatilidad. Riesgo controlado y confianza alta en análogos históricos. Vigilancia continua del estres sistémico y flujo de capital.",
+    "deep_analysis": "Mantener exposición con riesgo controlado. El régimen actual de bajo riesgo y el contexto histórico de anomalías estadísticas sugieren una estrategia de mantenimiento de posiciones. La confianza alta en los análogos históricos y la distancia media Mahalanobis apoyan esta decisión.",
     "matriz": [
         {
             "id": "ENERGIA",
             "nombre": "Petróleo WTI",
             "ticker": "CL=F",
             "precio": 87.71,
-            "limite_dinamico": 89.67,
+            "limite_dinamico": 84.7425,
             "percentil": 75,
-            "estado": "🟢 NOMINAL",
+            "estado": "🔴 CRÍTICO",
             "inverse": false,
             "threshold_method": "dynamic_percentile"
         },
@@ -141,9 +142,9 @@
             "nombre": "Dólar Index",
             "ticker": "DX-Y.NYB",
             "precio": 99.86,
-            "limite_dinamico": 98.45,
+            "limite_dinamico": 104.72,
             "percentil": 75,
-            "estado": "🔴 CRÍTICO",
+            "estado": "🟢 NOMINAL",
             "inverse": false,
             "threshold_method": "dynamic_percentile"
         },
@@ -152,7 +153,7 @@
             "nombre": "Bono USA 10Y",
             "ticker": "^TNX",
             "precio": 4.463,
-            "limite_dinamico": 3.9622,
+            "limite_dinamico": 4.355,
             "percentil": 80,
             "estado": "🔴 CRÍTICO",
             "inverse": false,
@@ -163,7 +164,7 @@
             "nombre": "Oro",
             "ticker": "GC=F",
             "precio": 4090.3,
-            "limite_dinamico": 1805.1,
+            "limite_dinamico": 3026.55,
             "percentil": 75,
             "estado": "🔴 CRÍTICO",
             "inverse": false,
@@ -193,24 +194,24 @@
         }
     ],
     "alertas_activas": [
-        "Dólar Index",
+        "Petróleo WTI",
         "Bono USA 10Y",
         "Oro"
     ],
     "exposure_ranking": [
         {
-            "sector": "Retail Importador",
+            "sector": "Aerolíneas",
             "score": 100.0,
             "nivel": "🔴 ALTO",
-            "impacto": "Dependencia del dólar.",
-            "accion": "Cobertura de divisa."
+            "impacto": "Coste de combustible crítico.",
+            "accion": "Evaluar coberturas de fuel."
         },
         {
-            "sector": "Tecnología",
+            "sector": "Industria Pesada",
             "score": 100.0,
             "nivel": "🔴 ALTO",
-            "impacto": "Sensibilidad a tipos y capital.",
-            "accion": "Optimización de estructura."
+            "impacto": "Energía intensiva + financiación.",
+            "accion": "Revisión de CAPEX."
         },
         {
             "sector": "Utilities",
@@ -220,6 +221,13 @@
             "accion": "Reestructuración de deuda."
         },
         {
+            "sector": "Minería / Materias P.",
+            "score": 100.0,
+            "nivel": "🔴 ALTO",
+            "impacto": "Ciclo de commodities.",
+            "accion": "Ajuste de producción."
+        },
+        {
             "sector": "Construcción / R.E.",
             "score": 100.0,
             "nivel": "🔴 ALTO",
@@ -227,18 +235,18 @@
             "accion": "Revisión de pipeline."
         },
         {
-            "sector": "Consumo Discrecional",
-            "score": 100.0,
+            "sector": "Transporte / Logística",
+            "score": 90.0,
             "nivel": "🔴 ALTO",
-            "impacto": "Sensibilidad a crédito y precios.",
-            "accion": "Ajuste de márgenes."
+            "impacto": "Presión en márgenes logísticos.",
+            "accion": "Optimización de rutas."
         },
         {
-            "sector": "Minería / Materias P.",
+            "sector": "Tecnología",
             "score": 84.0,
             "nivel": "🔴 ALTO",
-            "impacto": "Ciclo de commodities.",
-            "accion": "Ajuste de producción."
+            "impacto": "Sensibilidad a tipos y capital.",
+            "accion": "Optimización de estructura."
         },
         {
             "sector": "Banca / Financiero",
@@ -248,39 +256,32 @@
             "accion": "Monitorización de mora."
         },
         {
-            "sector": "Industria Pesada",
-            "score": 44.0,
-            "nivel": "🟢 BAJO",
-            "impacto": "Energía intensiva + financiación.",
-            "accion": "Revisión de CAPEX."
+            "sector": "Consumo Discrecional",
+            "score": 60.0,
+            "nivel": "🟡 MEDIO",
+            "impacto": "Sensibilidad a crédito y precios.",
+            "accion": "Ajuste de márgenes."
         },
         {
-            "sector": "Aerolíneas",
+            "sector": "Retail Importador",
             "score": 20.0,
             "nivel": "🟢 BAJO",
-            "impacto": "Coste de combustible crítico.",
-            "accion": "Evaluar coberturas de fuel."
-        },
-        {
-            "sector": "Transporte / Logística",
-            "score": 18.0,
-            "nivel": "🟢 BAJO",
-            "impacto": "Presión en márgenes logísticos.",
-            "accion": "Optimización de rutas."
+            "impacto": "Dependencia del dólar.",
+            "accion": "Cobertura de divisa."
         }
     ],
     "orden_corporativa": "RÉGIMEN NOMINAL. RIESGO SISTÉMICO CONTROLADO.",
     "informe": {
-        "PULSO_SISTEMICO": "Mercados en régimen nominal con riesgo sistémico controlado.",
-        "SENAL_NIIN": "EXPANSIÓN ESTRUCTURAL CON SECTORES CRÍTICOS",
+        "PULSO_SISTEMICO": "Mercados financieros con sectores críticos en Aerolíneas, Industria Pesada, Utilities, Minería / Materias P., Construcción / R.E., Transporte / Logística, Tecnología.",
+        "SENAL_NIIN": "EXPANSIÓN ESTRUCTURAL CON RIESGO SISTÉMICO CONTROLADO",
         "ANALISIS_IA": {
-            "dinamica_z_score": "Variación del Z-Score EWM: -0.3582σ, indicando estabilidad en el riesgo sistémico.",
-            "umbrales_dinamicos": "Dólar Index, Bono USA 10Y y Oro superan umbrales críticos, mientras que Petróleo WTI se mantiene nominal.",
-            "conclusion_fortaleza": "Sistema NIIN V5 muestra consistencia en la evaluación del riesgo, con sectores críticos identificados en Retail Importador, Tecnología, Utilities, Construcción / R.E., Consumo Discrecional y Minería / Materias P.",
-            "evolucion_cfo_fase_1": "En T-1, el riesgo sistémico se encontraba en expansión, con un Z-Score de -0.4141σ y Delta de 0.0559σ, lo que indica un aumento en el riesgo.",
-            "evolucion_cfo_fase_2": "En T, el impacto real en Tesorería y Flujo de Caja se ve afectado por la evolución de los sectores críticos y la estabilidad del régimen nominal.",
-            "resumen_ejecutivo": "Sistema NIIN V5 muestra robustez en la gestión de activos, con una clasificación técnica del riesgo que refleja la expansión estructural y la identificación de sectores críticos.",
-            "racional_completo": "Estrategia para T vs T-1 se centra en la gestión del riesgo sistémico y la mitigación de los efectos de los sectores críticos, sin sesgos predictivos."
+            "dinamica_z_score": "Variación del Z-Score EWM en -0.3582σ, indicando una disminución en el riesgo sistémico.",
+            "umbrales_dinamicos": "Petróleo WTI, Bono USA 10Y y Oro superan umbrales dinámicos, mientras que Dólar Index se encuentra en nominal.",
+            "conclusion_fortaleza": "Sistema NIIN V5 muestra consistencia en la gestión de activos, pero con sectores críticos que requieren atención.",
+            "evolucion_cfo_fase_1": "Condiciones de riesgo en T-1 con Z(T-1)=-0.4141σ y Delta=0.0559σ, indicando una expansión del riesgo.",
+            "evolucion_cfo_fase_2": "Impacto real en Tesorería y Flujo de Caja se ve afectado por la volatilidad de los sectores críticos.",
+            "resumen_ejecutivo": "Sistema NIIN V5 muestra robustez ante la gestión de activos, pero requiere monitoreo constante de los sectores críticos.",
+            "racional_completo": "Estrategia T vs T-1 se centra en la gestión de riesgos y la optimización de la cartera de activos, sin sesgos predictivos."
         }
     },
     "auditoria_mercado": {
@@ -289,16 +290,16 @@
         "delta_z": 0.0559,
         "cambios_exposicion": [
             {
-                "s": "Aerolíneas",
+                "s": "Retail Importador",
                 "d": -80.0
             },
             {
-                "s": "Transporte / Logística",
-                "d": -72.0
+                "s": "Consumo Discrecional",
+                "d": -40.0
             },
             {
-                "s": "Industria Pesada",
-                "d": -56.0
+                "s": "Tecnología",
+                "d": -16.0
             }
         ],
         "momentum": "expansión_riesgo"
@@ -315,7 +316,7 @@
         "cagr": "12.12%",
         "max_dd": "-43.25%",
         "sharpe": "0.815",
-        "total_aum": 2840000000.0,
+        "total_aum": 2839999923.0,
         "period": "2007-09-25 → 2026-05-15",
         "sessions": 4847,
         "cagr_vs_benchmark": "8.88%",
