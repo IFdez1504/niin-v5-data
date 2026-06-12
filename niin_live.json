@@ -10,29 +10,30 @@
         ],
         "python_version": "3.11.15",
         "platform": "Linux",
-        "run_timestamp_utc": "2026-06-12T02:02:38.393091+00:00"
+        "run_timestamp_utc": "2026-06-12T13:55:48.127206+00:00"
     },
-    "timestamp": "2026-06-12T02:02:38.391696+00:00Z",
+    "timestamp": "2026-06-12T13:55:48.125860+00:00Z",
     "version": "NIIN_ORACLE_V5.0",
     "z_score": -0.3582,
     "z_score_raw": -0.1069,
     "risk_status": "RISK_ON",
     "confidence": {
         "level": "LOW",
-        "knn_score": 0.8535,
-        "hmm_state": 1,
-        "hmm_label": "TRANSITION",
+        "knn_score": 0.9088,
+        "hmm_state": 0,
+        "hmm_label": "LOW_VOLATILITY",
         "hmm_type": "GaussianHMM"
     },
     "metrics": {
         "global_z_score_ewm": -0.3582,
         "global_z_score_raw": -0.1069,
         "vix_level": 19.44,
+        "spx": 7394.3,
         "vix_mean": 19.7749,
         "vix_std": 8.6977,
-        "hmm_state": 1,
+        "hmm_state": 0,
         "hmm_is_real": true,
-        "knn_confidence": 0.8535,
+        "knn_confidence": 0.9088,
         "regime": "ALCISTA",
         "sma_200": 6891.19
     },
@@ -50,18 +51,18 @@
         {
             "name": "KNN Analog Confidence",
             "status": "HIGH",
-            "intensity": 0.85
+            "intensity": 0.91
         }
     ],
     "action_node": {
         "type": "SYSTEM_SIGNAL_V5",
         "message": "MANTENER EXPOSICIÓN. RIESGO CONTROLADO.",
         "allocation": {
-            "cash": 0.0508,
-            "risk": 0.9492,
+            "cash": 0.0008,
+            "risk": 0.9992,
             "base_cash": 0.0008,
-            "hmm_premium": 0.05,
-            "knn_weight": 0.9561,
+            "hmm_premium": 0.0,
+            "knn_weight": 0.9726,
             "allocation_method": "knn_weighted_sigmoid_v5"
         },
         "allocation_method": "knn_weighted_sigmoid_v5"
@@ -69,66 +70,66 @@
     "historical_context": {
         "analog_dates": [
             {
-                "date": "2025-09-26",
-                "distance_mahal": 37.8279,
-                "distance_corr": 0.0689,
-                "distance_combined": 0.4127,
+                "date": "2023-08-16",
+                "distance_mahal": 3.7559,
+                "distance_corr": 0.2002,
+                "distance_combined": 0.2322,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             },
             {
-                "date": "2024-07-16",
-                "distance_mahal": 43.7227,
-                "distance_corr": 0.0775,
-                "distance_combined": 0.4759,
+                "date": "2017-07-06",
+                "distance_mahal": 3.5304,
+                "distance_corr": 0.3176,
+                "distance_combined": 0.2829,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             },
             {
-                "date": "2024-05-28",
-                "distance_mahal": 44.6058,
-                "distance_corr": 0.0898,
-                "distance_combined": 0.4909,
+                "date": "2008-07-24",
+                "distance_mahal": 3.9609,
+                "distance_corr": 0.3146,
+                "distance_combined": 0.2966,
+                "reference": "Lehman Collapse Reference",
+                "market_behavior": "Liquidity Crisis / Systemic Stress"
+            },
+            {
+                "date": "2010-01-21",
+                "distance_mahal": 4.0393,
+                "distance_corr": 0.3215,
+                "distance_combined": 0.3028,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             },
             {
-                "date": "2025-07-30",
-                "distance_mahal": 44.2416,
-                "distance_corr": 0.0983,
-                "distance_combined": 0.4915,
-                "reference": "Market Friction Analog",
-                "market_behavior": "Statistical Anomaly Detection"
-            },
-            {
-                "date": "2024-11-07",
-                "distance_mahal": 45.7357,
-                "distance_corr": 0.0956,
-                "distance_combined": 0.5051,
+                "date": "2007-08-30",
+                "distance_mahal": 4.065,
+                "distance_corr": 0.3547,
+                "distance_combined": 0.3203,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             }
         ],
-        "knn_confidence": 0.8535,
+        "knn_confidence": 0.9088,
         "distance_metric": "Mahalanobis+Correlation_50/50",
         "pca_components": 15,
         "exclusion_window": 180
     },
     "dictamen_cuantitativo": {
-        "REGIMEN_ACTUAL": "Estado HMM: TRANSITION. Flujo de capital: estable. Régimen: moderado.",
-        "ESTRES_SISTEMICO": "VIX: 19.44. Z-Score EWM: -0.3582σ. Riesgo de cola: controlado.",
-        "CONTEXTO_HISTORICO": "Análogos históricos identificados: 2025-09-26, 2024-07-16, 2024-05-28, 2025-07-30, 2024-11-07. Comportamiento: detección de anomalías estadísticas.",
-        "CONFIANZA_KNN": "Confianza KNN: 0.854. Distancia media: 43.06. Confianza alta.",
+        "REGIMEN_ACTUAL": "Estado HMM: LOW_VOLATILITY. Flujo de capital estable. Régimen de baja volatilidad.",
+        "ESTRES_SISTEMICO": "VIX: 19.44. Z-Score EWM: -0.3582σ. Riesgo de cola moderado.",
+        "CONTEXTO_HISTORICO": "Análogos históricos identificados: 2023-08-16, 2017-07-06, 2008-07-24, 2010-01-21, 2007-08-30. Comportamiento: Detección de anomalías estadísticas y crisis de liquidez.",
+        "CONFIANZA_KNN": "Confianza KNN: 0.909. Distancia media Mahalanobis: 3.96. Confianza alta.",
         "DICTAMEN_OPERATIVO": "MANTENER EXPOSICIÓN. RIESGO CONTROLADO.",
-        "SINTESIS_ESTRATEGICA": "Mantener exposición con riesgo controlado. Estado HMM en transición. Análogos históricos indican comportamiento de detección de anomalías estadísticas. Confianza KNN alta."
+        "SINTESIS_ESTRATEGICA": "Mantener exposición en régimen de baja volatilidad. Riesgo controlado y confianza alta en análogos históricos. Vigilancia continua del estres sistémico y flujo de capital."
     },
-    "deep_analysis": "Mantener exposición con riesgo controlado. Estado HMM en transición. Análogos históricos indican comportamiento de detección de anomalías estadísticas. Confianza KNN alta.",
+    "deep_analysis": "Mantener exposición en régimen de baja volatilidad. Riesgo controlado y confianza alta en análogos históricos. Vigilancia continua del estres sistémico y flujo de capital.",
     "matriz": [
         {
             "id": "ENERGIA",
             "nombre": "Petróleo WTI",
             "ticker": "CL=F",
-            "precio": 86.79,
+            "precio": 87.71,
             "limite_dinamico": 89.67,
             "percentil": 75,
             "estado": "🟢 NOMINAL",
@@ -139,7 +140,7 @@
             "id": "DIVISA",
             "nombre": "Dólar Index",
             "ticker": "DX-Y.NYB",
-            "precio": 99.828,
+            "precio": 99.86,
             "limite_dinamico": 98.45,
             "percentil": 75,
             "estado": "🔴 CRÍTICO",
@@ -161,7 +162,7 @@
             "id": "MATERIAS",
             "nombre": "Oro",
             "ticker": "GC=F",
-            "precio": 4211.7002,
+            "precio": 4090.3,
             "limite_dinamico": 1805.1,
             "percentil": 75,
             "estado": "🔴 CRÍTICO",
@@ -270,16 +271,16 @@
     ],
     "orden_corporativa": "RÉGIMEN NOMINAL. RIESGO SISTÉMICO CONTROLADO.",
     "informe": {
-        "PULSO_SISTEMICO": "Mercados financieros con sectores críticos en Retail Importador, Tecnología, Utilities, Construcción / R.E., Consumo Discrecional y Minería / Materias P.",
-        "SENAL_NIIN": "EXPANSIÓN ESTRUCTURAL CON RIESGO SISTÉMICO CONTROLADO",
+        "PULSO_SISTEMICO": "Mercados en régimen nominal con riesgo sistémico controlado.",
+        "SENAL_NIIN": "EXPANSIÓN ESTRUCTURAL CON SECTORES CRÍTICOS",
         "ANALISIS_IA": {
-            "dinamica_z_score": "Z-Score EWM en -0.3582σ, indicando una desviación estándar por debajo de la media histórica",
-            "umbrales_dinamicos": "Umbral dinámico p75 para Petróleo WTI en 89.67, Dólar Index en 98.45, Bono USA 10Y en 3.9622 y Oro en 1805.1",
-            "conclusion_fortaleza": "Sistema NIIN V5 muestra consistencia en la gestión de activos, pero con sectores críticos que requieren atención",
-            "evolucion_cfo_fase_1": "Condiciones de riesgo en T-1 con Z(T-1)=-0.4141σ y Delta=0.0559σ, indicando una expansión del riesgo",
-            "evolucion_cfo_fase_2": "Impacto real en Tesorería y Flujo de Caja debido a la volatilidad en los mercados financieros, especialmente en Dólar Index, Bono USA 10Y y Oro",
-            "resumen_ejecutivo": "Sistema NIIN V5 muestra robustez en la gestión de activos, pero requiere monitoreo constante de los sectores críticos y los umbrales dinámicos",
-            "racional_completo": "Estrategia de gestión de activos en T vs T-1 se enfoca en la mitigación del riesgo sistémico y la optimización del rendimiento en un entorno de expansión estructural"
+            "dinamica_z_score": "Variación del Z-Score EWM: -0.3582σ, indicando estabilidad en el riesgo sistémico.",
+            "umbrales_dinamicos": "Dólar Index, Bono USA 10Y y Oro superan umbrales críticos, mientras que Petróleo WTI se mantiene nominal.",
+            "conclusion_fortaleza": "Sistema NIIN V5 muestra consistencia en la evaluación del riesgo, con sectores críticos identificados en Retail Importador, Tecnología, Utilities, Construcción / R.E., Consumo Discrecional y Minería / Materias P.",
+            "evolucion_cfo_fase_1": "En T-1, el riesgo sistémico se encontraba en expansión, con un Z-Score de -0.4141σ y Delta de 0.0559σ, lo que indica un aumento en el riesgo.",
+            "evolucion_cfo_fase_2": "En T, el impacto real en Tesorería y Flujo de Caja se ve afectado por la evolución de los sectores críticos y la estabilidad del régimen nominal.",
+            "resumen_ejecutivo": "Sistema NIIN V5 muestra robustez en la gestión de activos, con una clasificación técnica del riesgo que refleja la expansión estructural y la identificación de sectores críticos.",
+            "racional_completo": "Estrategia para T vs T-1 se centra en la gestión del riesgo sistémico y la mitigación de los efectos de los sectores críticos, sin sesgos predictivos."
         }
     },
     "auditoria_mercado": {
@@ -304,10 +305,10 @@
     },
     "niin_accuracy": {
         "status": "active",
-        "days_tracked": 19,
+        "days_tracked": 20,
         "accuracy_score": 100.0,
-        "current_streak": 19,
-        "max_streak": 19,
+        "current_streak": 20,
+        "max_streak": 20,
         "confidence_level": "🟢 ALTA FIABILIDAD"
     },
     "performance": {
@@ -323,22 +324,22 @@
     "portfolio_breakdown": [
         {
             "name": "Equity L/S",
-            "value": 57.0,
+            "value": 60.0,
             "color": "#8b5cf6"
         },
         {
             "name": "Global Macro",
-            "value": 23.7,
+            "value": 25.0,
             "color": "#dc2626"
         },
         {
             "name": "Volatility",
-            "value": 14.2,
+            "value": 15.0,
             "color": "#6366f1"
         },
         {
             "name": "Cash",
-            "value": 5.1,
+            "value": 0.1,
             "color": "#10b981"
         }
     ],
@@ -514,9 +515,9 @@
     },
     "hmm_allocation_breakdown": {
         "signal_cash": 0.0008,
-        "hmm_premium": 0.05,
-        "total_cash": 0.0508,
-        "knn_weight": 0.9561
+        "hmm_premium": 0.0,
+        "total_cash": 0.0008,
+        "knn_weight": 0.9726
     },
     "z_score_context": {
         "z_score_ewm": -0.3582,
@@ -527,13 +528,16 @@
     },
     "analog_quality": {
         "n_analogs": 5,
-        "mean_distance": 0.4752,
-        "knn_confidence": 0.8535,
+        "mean_distance": 0.287,
+        "knn_confidence": 0.9088,
         "cluster_warning": false,
-        "temporal_diversity": 2,
+        "temporal_diversity": 5,
         "years_represented": [
-            "2024",
-            "2025"
+            "2007",
+            "2008",
+            "2010",
+            "2017",
+            "2023"
         ]
     },
     "audit_flags": {
