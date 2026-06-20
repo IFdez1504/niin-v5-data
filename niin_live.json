@@ -6,14 +6,16 @@
         "config_version": "5.0.0",
         "features_active": [
             "rolling_percentiles_5y",
-            "hmm_fallback_available",
-            "pipeline_latency_logging"
+            "pipeline_latency_logging",
+            "hmm_gaussian_real_active"
         ],
         "python_version": "3.11.15",
         "platform": "Linux",
-        "run_timestamp_utc": "2026-06-20T01:57:11.732145+00:00"
+        "run_timestamp_utc": "2026-06-20T14:22:10.736315+00:00",
+        "hmm_engine": "GaussianHMM",
+        "hmm_is_real": true
     },
-    "timestamp": "2026-06-20T01:57:11.732101Z",
+    "timestamp": "2026-06-20T14:22:10.736268Z",
     "version": "NIIN Analytics",
     "z_score": -0.5543,
     "z_score_raw": -0.6692,
@@ -23,7 +25,22 @@
         "knn_score": 0.9153,
         "hmm_state": 0,
         "hmm_label": "LOW_VOLATILITY",
-        "hmm_type": "GaussianHMM"
+        "hmm_type": "GaussianHMM",
+        "hmm_state_probabilities": [
+            1.0,
+            0.0,
+            0.0
+        ],
+        "hmm_transition_prob_7d": [
+            0.9028,
+            0.0464,
+            0.0509
+        ],
+        "hmm_state_labels": [
+            "LOW_VOLATILITY",
+            "TRANSITION",
+            "SYSTEMIC_STRESS"
+        ]
     },
     "metrics": {
         "global_z_score_ewm": -0.5543,
@@ -108,9 +125,9 @@
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "En enero de 2010, el mercado enfrentaba tensiones por la crisis de deuda soberana y el riesgo de contagio en la Unión Europea, lo que generó un pico de volatilidad.",
-                "evolucion_posterior": "Después de la fecha del análogo, el SPX experimentó una subida del 0.58% en 30 sesiones y del 8.53% en 60 sesiones, pero cayó un 1.2% en 90 sesiones, para finalmente estabilizarse en una tendencia lateral.",
-                "leccion_actual": "La dinámica de este análogo sugiere que, incluso en un régimen alcista, los episodios de alta volatilidad pueden generar movimientos laterales en el mercado, lo que implica una posible consolidación antes de que el mercado retome su tendencia alcista."
+                "contexto_historico": "En enero de 2010, el mercado enfrentaba tensiones por la deuda soberana y el riesgo de contagio en la Unión Europea, lo que generó un pico de volatilidad.",
+                "evolucion_posterior": "Después de la fecha del análogo, el SPX experimentó una subida moderada en los 60 días siguientes con un retorno del 8.53%, pero luego se estabilizó y cayó un 1.2% en los 90 días posteriores, entrando en una tendencia lateral.",
+                "leccion_actual": "La dinámica de este análogo sugiere que, incluso en un régimen alcista, los episodios de estrés y volatilidad pueden generar movimientos laterales en el mercado, lo que implica una posible consolidación en el corto plazo."
             }
         },
         {
@@ -131,8 +148,8 @@
             },
             "narrativa": {
                 "contexto_historico": "En noviembre de 2024, el mercado experimentó un rally impulsado por la inteligencia artificial, caracterizado por un momentum significativo y concentración de riesgos.",
-                "evolucion_posterior": "Después de la fecha de referencia, el SPX mostró retornos positivos en los 30 y 60 días siguientes, con un 5.63% y 4.95% respectivamente, pero luego experimentó una caída del 1.99% en los 90 días siguientes, entrando en una tendencia lateral.",
-                "leccion_actual": "Este análogo histórico sugiere que, incluso en un régimen alcista, la concentración de riesgos y el momentum pueden llevar a una reversión y una tendencia lateral, lo que implica que la dinámica actual podría estar cerca de un punto de inflexión."
+                "evolucion_posterior": "Después de la fecha de referencia, el SPX mostró un retorno del 5.63% en 30 sesiones, 4.95% en 60 sesiones, pero luego cayó un 1.99% en 90 sesiones, indicando una tendencia lateral.",
+                "leccion_actual": "Este análogo histórico sugiere que, incluso en un régimen alcista, la concentración de riesgos y el momentum pueden llevar a una reversión y una tendencia lateral, lo que implica una necesidad de monitorear y ajustar las estrategias de inversión para mitigar posibles pérdidas."
             }
         },
         {
@@ -154,7 +171,7 @@
             "narrativa": {
                 "contexto_historico": "El mercado experimentaba un aumento del estrés financiero previo a la quiebra de Lehman Brothers, con la crisis de liquidez y el colapso de Bear Stearns.",
                 "evolucion_posterior": "El SPX mostró una caída del 0.56% en 30 sesiones, del 29.2% en 60 sesiones y del 30.77% en 90 sesiones después del análogo.",
-                "leccion_actual": "La dinámica de este análogo histórico sugiere que, incluso en un régimen alcista, la aparición de factores de estrés financiero puede desencadenar una reversión significativa en el mercado."
+                "leccion_actual": "La dinámica de este análogo histórico sugiere que, incluso en un régimen alcista, la aparición de signos de estrés financiero y crisis de liquidez puede llevar a una reversión significativa del mercado."
             }
         },
         {
@@ -174,8 +191,8 @@
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "En octubre de 2023, el mercado experimentaba una normalización post-inflacionaria con un comportamiento de meseta en las tasas de interés y una revalorización de las acciones.",
-                "evolucion_posterior": "Después de la fecha de referencia, el SPX experimentó un rally con retornos reales del 4.77% en 30 sesiones, 10.71% en 60 sesiones y 16.56% en 90 sesiones.",
+                "contexto_historico": "En octubre de 2023, el mercado experimentó una normalización post-inflacionaria con un comportamiento de meseta en las tasas de interés y una revalorización de las acciones.",
+                "evolucion_posterior": "El SPX registró retornos reales del 4.77% en 30 sesiones, 10.71% en 60 sesiones y 16.56% en 90 sesiones después del análogo.",
                 "leccion_actual": "La dinámica de este análogo sugiere que, en un régimen alcista, la estabilización de las tasas de interés puede impulsar una revalorización de las acciones y un rally en el mercado."
             }
         }
@@ -229,14 +246,14 @@
         "exclusion_window": 180
     },
     "dictamen_cuantitativo": {
-        "REGIMEN_ACTUAL": "Estado HMM: LOW_VOLATILITY. Flujo de capital estable. Régimen de bajo riesgo.",
+        "REGIMEN_ACTUAL": "Estado HMM: LOW_VOLATILITY. Flujo de capital estable. Régimen de baja volatilidad.",
         "ESTRES_SISTEMICO": "VIX: 16.78. Z-Score EWM: -0.5543σ. Riesgo de cola controlado.",
-        "CONTEXTO_HISTORICO": "Análogos Mahalanobis: 2 alcistas, 2 laterales, 1 crisis. Períodos de recuperación y estrés financiero.",
-        "CONFIANZA_KNN": "Confianza KNN: 0.915. Distancia media Mahalanobis: 3.78. Correlación: 50/50.",
+        "CONTEXTO_HISTORICO": "Análogos Mahalanobis: 2 alcistas, 2 laterales, 1 crisis. Períodos de baja volatilidad y recuperación.",
+        "CONFIANZA_KNN": "Confianza KNN: 0.915. Distancia media Mahalanobis: 3.73. Correlación: 50/50.",
         "DICTAMEN_OPERATIVO": "MANTENER EXPOSICIÓN. RIESGO CONTROLADO.",
-        "SINTESIS_ESTRATEGICA": "Mantener exposición en un entorno de bajo riesgo. El régimen actual de bajo volatilidad y el control del riesgo de cola sugieren una estrategia de mantenimiento de posiciones. La confianza en los análogos históricos y la correlación con períodos de recuperación y estrés financiero respaldan esta decisión."
+        "SINTESIS_ESTRATEGICA": "Mantener exposición en un entorno de baja volatilidad. Riesgo sistémico controlado. Análogos históricos sugieren potencial alcista a corto plazo."
     },
-    "deep_analysis": "Mantener exposición en un entorno de bajo riesgo. El régimen actual de bajo volatilidad y el control del riesgo de cola sugieren una estrategia de mantenimiento de posiciones. La confianza en los análogos históricos y la correlación con períodos de recuperación y estrés financiero respaldan esta decisión.",
+    "deep_analysis": "Mantener exposición en un entorno de baja volatilidad. Riesgo sistémico controlado. Análogos históricos sugieren potencial alcista a corto plazo.",
     "matriz": [
         {
             "id": "ENERGIA",
@@ -389,10 +406,10 @@
             "dinamica_z_score": "La variación del Z-Score EWM se mantiene en -0.5543σ, indicando una estabilidad en el riesgo sistémico.",
             "umbrales_dinamicos": "Los umbrales dinámicos activos muestran que el Bono USA 10Y y el Oro se encuentran en niveles críticos, mientras que el Petróleo WTI y el Dólar Index se mantienen en niveles nominales.",
             "conclusion_fortaleza": "El sistema NIIN Analytics muestra una consistencia en la evaluación del riesgo, aunque con áreas de atención en sectores específicos.",
-            "evolucion_cfo_fase_1": "En T-1, el riesgo se encontraba en un nivel de -0.5486σ, y en T, se mantiene en un nivel similar de -0.5543σ, lo que indica una estabilidad en el riesgo.",
+            "evolucion_cfo_fase_1": "En T-1, el riesgo sistémico se encontraba en -0.5486σ, y en T, se mantiene en -0.5543σ, lo que indica una estabilidad en el riesgo.",
             "evolucion_cfo_fase_2": "El impacto real en Tesorería y Flujo de Caja puede ser significativo debido a los sectores críticos, por lo que se requiere una gestión activa de los activos.",
             "resumen_ejecutivo": "El sistema NIIN Analytics muestra una robustez en la gestión de activos, aunque con áreas de atención en sectores específicos que requieren una gestión activa.",
-            "racional_completo": "La estrategia para T vs T-1 se centra en mantener una postura defensiva en sectores críticos y aprovechar oportunidades en sectores con menor riesgo, sin sesgos predictivos."
+            "racional_completo": "La estrategia para T vs T-1 se centra en la gestión activa de los activos en sectores críticos, con el objetivo de minimizar el impacto en Tesorería y Flujo de Caja."
         }
     },
     "auditoria_mercado": {
@@ -731,7 +748,7 @@
         "cagr": "12.12%",
         "max_dd": "-43.25%",
         "sharpe": "0.815",
-        "total_aum": 2883773359.0,
+        "total_aum": 2883773397.0,
         "period": "2007-09-25 → 2026-05-15",
         "sessions": 4847,
         "cagr_vs_benchmark": "8.88%",
