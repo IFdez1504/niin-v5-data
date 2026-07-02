@@ -11,18 +11,18 @@
         ],
         "python_version": "3.11.15",
         "platform": "Linux",
-        "run_timestamp_utc": "2026-07-01T01:59:54.229220+00:00",
+        "run_timestamp_utc": "2026-07-02T01:54:05.701062+00:00",
         "hmm_engine": "GaussianHMM",
         "hmm_is_real": true
     },
-    "timestamp": "2026-07-01T01:59:54.229178Z",
+    "timestamp": "2026-07-02T01:54:05.701020Z",
     "version": "NIIN Analytics",
-    "z_score": -0.3045,
-    "z_score_raw": -0.924,
+    "z_score": -0.4165,
+    "z_score_raw": -0.9202,
     "risk_status": "RISK_ON",
     "confidence": {
         "level": "LOW",
-        "knn_score": 0.8899,
+        "knn_score": 0.9039,
         "hmm_state": 0,
         "hmm_label": "LOW_VOLATILITY",
         "hmm_type": "GaussianHMM",
@@ -33,8 +33,8 @@
         ],
         "hmm_transition_prob_7d": [
             0.0023,
-            0.9145,
-            0.0832
+            0.9144,
+            0.0833
         ],
         "hmm_state_labels": [
             "LOW_VOLATILITY",
@@ -43,17 +43,17 @@
         ]
     },
     "metrics": {
-        "global_z_score_ewm": -0.3045,
-        "global_z_score_raw": -0.924,
-        "vix_level": 16.45,
-        "spx": 7499.36,
-        "vix_mean": 19.7694,
-        "vix_std": 8.6873,
+        "global_z_score_ewm": -0.4165,
+        "global_z_score_raw": -0.9202,
+        "vix_level": 16.59,
+        "spx": 7483.23,
+        "vix_mean": 19.7688,
+        "vix_std": 8.6866,
         "hmm_state": 0,
         "hmm_is_real": true,
-        "knn_confidence": 0.8899,
+        "knn_confidence": 0.9039,
         "regime": "ALCISTA",
-        "sma_200": 6947.48
+        "sma_200": 6951.61
     },
     "system_drivers": [
         {
@@ -69,50 +69,72 @@
         {
             "name": "KNN Analog Confidence",
             "status": "HIGH",
-            "intensity": 0.89
+            "intensity": 0.9
         }
     ],
     "action_node": {
         "type": "SYSTEM_SIGNAL_V5",
-        "message": "MAINTAIN EXPOSURE. CONTROLLED RISK.",
+        "message": "MAINTAIN EXPOSURE. RISK CONTROLLED.",
         "allocation": {
-            "cash": 0.0009,
-            "risk": 0.9991,
-            "base_cash": 0.0009,
+            "cash": 0.0007,
+            "risk": 0.9993,
+            "base_cash": 0.0007,
             "hmm_premium": 0.0,
-            "knn_weight": 0.967,
+            "knn_weight": 0.9712,
             "allocation_method": "knn_weighted_sigmoid_v5"
         },
         "allocation_method": "knn_weighted_sigmoid_v5"
     },
     "analog_intelligence": [
         {
-            "date": "2009-08-31",
-            "distance_mahal": 6.1881,
-            "distance_corr": 0.2849,
-            "distance_combined": 0.3281,
-            "reference": "Post-Lehman Recovery",
-            "market_behavior": "Risk-On Recovery / Reflation",
+            "date": "2008-07-30",
+            "distance_mahal": 4.7441,
+            "distance_corr": 0.2482,
+            "distance_combined": 0.2724,
+            "reference": "Pre-Lehman Financial Stress",
+            "market_behavior": "Bear Stearns Collapse / Liquidity Crisis",
             "analog_returns": {
-                "spx_base": 1020.62,
-                "retorno_30d": 5.44,
-                "retorno_60d": 8.39,
-                "retorno_90d": 11.36,
-                "max_drawdown_intermedio": -2.53,
+                "spx_base": 1284.26,
+                "retorno_30d": -4.07,
+                "retorno_60d": -30.17,
+                "retorno_90d": -32.2,
+                "max_drawdown_intermedio": -41.41,
+                "tendencia_post": "CRISIS",
+                "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
+            },
+            "narrativa": {
+                "contexto_historico": "In July 2008, the market was experiencing an increase in financial stress prior to the Lehman Brothers bankruptcy, with the liquidity crisis and the collapse of Bear Stearns as key events.",
+                "evolucion_posterior": "The SPX recorded real returns of -4.07% in 30 sessions, -30.17% in 60 sessions, and -32.2% in 90 sessions after the analog date, indicating a downward trend.",
+                "leccion_actual": "The dynamics of this historical analog suggest that, even in a bullish regime, the emergence of financial stress factors and liquidity crises can lead to a significant reversal of the trend, implying a need for vigilance and adjustment of investment strategies."
+            }
+        },
+        {
+            "date": "2023-12-12",
+            "distance_mahal": 4.3809,
+            "distance_corr": 0.3214,
+            "distance_combined": 0.2976,
+            "reference": "Post-Inflation Normalization",
+            "market_behavior": "Rate Plateau / Equity Re-rating",
+            "analog_returns": {
+                "spx_base": 4643.7,
+                "retorno_30d": 4.84,
+                "retorno_60d": 9.93,
+                "retorno_90d": 8.15,
+                "max_drawdown_intermedio": 0.97,
                 "tendencia_post": "ALCISTA",
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "In August 2009, the market was in a post-Lehman recovery phase, characterized by an uptrend and economic reactivation.",
-                "evolucion_posterior": "The SPX recorded real returns of 5.44% in 30 sessions, 8.39% in 60 sessions, and 11.36% in 90 sessions, confirming a sustained uptrend.",
-                "leccion_actual": "The dynamics of this analogue suggest that, in an uptrend regime, the trend can be maintained and deepened, driven by confidence in economic recovery and the reactivation of risk appetite."
+                "contexto_historico": "In December 2023, the market was experiencing a post-inflationary normalization with a plateau behavior in interest rates and a revaluation of stocks.",
+                "evolucion_posterior": "The SPX showed real returns of 4.84% in 30 sessions, 9.93% in 60 sessions, and 8.15% in 90 sessions after the analog.",
+                "leccion_actual": "The dynamics of this analog suggest that, in a bullish regime, the stabilization of interest rates can drive a revaluation of stocks, which could maintain the upward trend in the market."
             }
         },
         {
             "date": "2024-07-26",
-            "distance_mahal": 5.8759,
-            "distance_corr": 0.3199,
-            "distance_combined": 0.3362,
+            "distance_mahal": 5.1123,
+            "distance_corr": 0.2985,
+            "distance_combined": 0.3091,
             "reference": "AI Rally Analog",
             "market_behavior": "Momentum / Concentration Risk",
             "analog_returns": {
@@ -125,141 +147,119 @@
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "In July 2024, the market was experiencing a rally driven by artificial intelligence, with a focus on momentum and concentration risk.",
-                "evolucion_posterior": "After the reference date, the SPX showed an initial decline with a return of -0.93% in 30 sessions, but then recovered with returns of 7.43% and 10.5% in 60 and 90 sessions, respectively.",
-                "leccion_actual": "The dynamics of this analogue suggest that, even in an uptrend regime, an initial correction can occur, but the overall trend can remain bullish, implying that investors should be prepared for a possible recovery after an initial decline."
+                "contexto_historico": "In July 2024, the market experienced a rally driven by artificial intelligence, characterized by significant momentum and risk concentration.",
+                "evolucion_posterior": "After the reference date, the SPX showed an initial decline of -0.93% in 30 sessions, but then recovered with returns of 7.43% in 60 sessions and 10.5% in 90 sessions, indicating an upward trend.",
+                "leccion_actual": "The dynamics of this analog suggest that, even in a bullish regime, an initial correction may occur, but the underlying trend can prevail and lead to a recovery and continuation of the rally, implying that investors should consider the possibility of a consolidation before a potential resumption of the uptrend."
             }
         },
         {
-            "date": "2014-09-15",
-            "distance_mahal": 6.5574,
-            "distance_corr": 0.3046,
-            "distance_combined": 0.3491,
+            "date": "2017-03-10",
+            "distance_mahal": 5.0685,
+            "distance_corr": 0.3116,
+            "distance_combined": 0.3143,
             "reference": "Market Friction Analog",
             "market_behavior": "Statistical Anomaly Detection",
             "analog_returns": {
-                "spx_base": 1984.13,
-                "retorno_30d": -1.13,
-                "retorno_60d": 3.84,
-                "retorno_90d": 1.94,
-                "max_drawdown_intermedio": -6.13,
+                "spx_base": 2372.6,
+                "retorno_30d": -1.01,
+                "retorno_60d": 2.8,
+                "retorno_90d": 3.65,
+                "max_drawdown_intermedio": -1.84,
                 "tendencia_post": "LATERAL",
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "In 2014, the market was experiencing a consolidation phase after a prolonged rally, with concerns about monetary policy normalization.",
-                "evolucion_posterior": "The SPX showed a lateral trend in the following 90 days, with a return of -1.13% in 30 sessions and 3.84% in 60 sessions, before closing with a return of 1.94% in 90 sessions.",
-                "leccion_actual": "This analogue suggests that, even in an uptrend regime, the market can experience periods of consolidation and lateral movement, implying that investors should be prepared for a possible pause in the rally before a potential resumption of the uptrend."
+                "contexto_historico": "In March 2017, the market was experiencing frictions due to political and economic uncertainties.",
+                "evolucion_posterior": "The SPX showed a lateral trend in the following 90 days, with real returns of -1.01% in 30 sessions, 2.8% in 60 sessions, and 3.65% in 90 sessions.",
+                "leccion_actual": "This analog suggests that, despite a bullish regime, the market may experience a lateral consolidation before continuing its trend."
             }
         },
         {
-            "date": "2025-08-26",
-            "distance_mahal": 5.5819,
-            "distance_corr": 0.3727,
-            "distance_combined": 0.3538,
-            "reference": "Market Friction Analog",
-            "market_behavior": "Statistical Anomaly Detection",
+            "date": "2009-08-31",
+            "distance_mahal": 5.2863,
+            "distance_corr": 0.3138,
+            "distance_combined": 0.3222,
+            "reference": "Post-Lehman Recovery",
+            "market_behavior": "Risk-On Recovery / Reflation",
             "analog_returns": {
-                "spx_base": 6465.94,
-                "retorno_30d": 3.85,
-                "retorno_60d": 2.34,
-                "retorno_90d": 6.65,
-                "max_drawdown_intermedio": -0.78,
+                "spx_base": 1020.62,
+                "retorno_30d": 5.44,
+                "retorno_60d": 8.39,
+                "retorno_90d": 11.36,
+                "max_drawdown_intermedio": -2.53,
                 "tendencia_post": "ALCISTA",
                 "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
             },
             "narrativa": {
-                "contexto_historico": "In August 2025, the market was experiencing a decrease in volatility after a period of high uncertainty, leading to a recovery in stock prices.",
-                "evolucion_posterior": "After the analogue, the SPX showed a sustained uptrend, with real returns of 3.85% in 30 sessions, 2.34% in 60 sessions, and 6.65% in 90 sessions.",
-                "leccion_actual": "The dynamics of this analogue suggest that, in an uptrend regime, overcoming resistance thresholds can drive a continuous growth trend, implying that the market can continue to advance in the short term."
-            }
-        },
-        {
-            "date": "2008-07-25",
-            "distance_mahal": 6.46,
-            "distance_corr": 0.3759,
-            "distance_combined": 0.3818,
-            "reference": "Pre-Lehman Financial Stress",
-            "market_behavior": "Bear Stearns Collapse / Liquidity Crisis",
-            "analog_returns": {
-                "spx_base": 1257.76,
-                "retorno_30d": -1.23,
-                "retorno_60d": -25.22,
-                "retorno_90d": -28.74,
-                "max_drawdown_intermedio": -40.18,
-                "tendencia_post": "CRISIS",
-                "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
-            },
-            "narrativa": {
-                "contexto_historico": "The market was experiencing increased financial stress prior to the Lehman Brothers bankruptcy, with the fall of Bear Stearns and a liquidity crisis.",
-                "evolucion_posterior": "The SPX showed a decline of 1.23% in 30 sessions, 25.22% in 60 sessions, and 28.74% in 90 sessions after the analogue.",
-                "leccion_actual": "The dynamics of this historical analogue suggest that, even in an uptrend regime, the emergence of financial stress factors can trigger a significant reversal in the market, implying a need for vigilance and adjustment of investment strategies."
+                "contexto_historico": "In August 2009, the market was in a post-Lehman recovery phase, characterized by an upward trend and economic reactivation.",
+                "evolucion_posterior": "In the following 90 days, the SPX recorded a return of 11.36%, confirming the upward trend and the effectiveness of the expansive monetary policy at that time.",
+                "leccion_actual": "The dynamics of this analog suggest that, in a bullish regime, the continuation of the positive trend is likely driven by favorable fundamental and technical factors, which could sustain the market's momentum."
             }
         }
     ],
     "historical_context": {
         "analog_dates": [
             {
-                "date": "2009-08-31",
-                "distance_mahal": 6.1881,
-                "distance_corr": 0.2849,
-                "distance_combined": 0.3281,
-                "reference": "Post-Lehman Recovery",
-                "market_behavior": "Risk-On Recovery / Reflation"
+                "date": "2008-07-30",
+                "distance_mahal": 4.7441,
+                "distance_corr": 0.2482,
+                "distance_combined": 0.2724,
+                "reference": "Pre-Lehman Financial Stress",
+                "market_behavior": "Bear Stearns Collapse / Liquidity Crisis"
+            },
+            {
+                "date": "2023-12-12",
+                "distance_mahal": 4.3809,
+                "distance_corr": 0.3214,
+                "distance_combined": 0.2976,
+                "reference": "Post-Inflation Normalization",
+                "market_behavior": "Rate Plateau / Equity Re-rating"
             },
             {
                 "date": "2024-07-26",
-                "distance_mahal": 5.8759,
-                "distance_corr": 0.3199,
-                "distance_combined": 0.3362,
+                "distance_mahal": 5.1123,
+                "distance_corr": 0.2985,
+                "distance_combined": 0.3091,
                 "reference": "AI Rally Analog",
                 "market_behavior": "Momentum / Concentration Risk"
             },
             {
-                "date": "2014-09-15",
-                "distance_mahal": 6.5574,
-                "distance_corr": 0.3046,
-                "distance_combined": 0.3491,
+                "date": "2017-03-10",
+                "distance_mahal": 5.0685,
+                "distance_corr": 0.3116,
+                "distance_combined": 0.3143,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             },
             {
-                "date": "2025-08-26",
-                "distance_mahal": 5.5819,
-                "distance_corr": 0.3727,
-                "distance_combined": 0.3538,
-                "reference": "Market Friction Analog",
-                "market_behavior": "Statistical Anomaly Detection"
-            },
-            {
-                "date": "2008-07-25",
-                "distance_mahal": 6.46,
-                "distance_corr": 0.3759,
-                "distance_combined": 0.3818,
-                "reference": "Pre-Lehman Financial Stress",
-                "market_behavior": "Bear Stearns Collapse / Liquidity Crisis"
+                "date": "2009-08-31",
+                "distance_mahal": 5.2863,
+                "distance_corr": 0.3138,
+                "distance_combined": 0.3222,
+                "reference": "Post-Lehman Recovery",
+                "market_behavior": "Risk-On Recovery / Reflation"
             }
         ],
-        "knn_confidence": 0.8899,
+        "knn_confidence": 0.9039,
         "distance_metric": "Mahalanobis+Correlation_50/50",
         "pca_components": 15,
         "exclusion_window": 180
     },
     "dictamen_cuantitativo": {
-        "REGIMEN_ACTUAL": "Current State HMM: LOW_VOLATILITY. Stable capital flow. Low-risk regime.",
-        "ESTRES_SISTEMICO": "VIX: 16.45. Z-Score EWM: -0.304σ. Controlled tail risk.",
-        "CONTEXTO_HISTORICO": "Mahalanobis Analogues: 3/5 bullish, 1/5 lateral, 1/5 crisis. Similar historical patterns.",
-        "CONFIANZA_KNN": "Confianza KNN: 0.890. Distancia media Mahalanobis: 6.118. Correlación: 50/50.",
-        "DICTAMEN_OPERATIVO": "MAINTAIN EXPOSURE. CONTROLLED RISK.",
-        "SINTESIS_ESTRATEGICA": "Maintain exposure in a low-risk environment. The current low-volatility regime and controlled tail risk suggest a maintenance strategy. Confidence in historical analogues and correlation with past patterns reinforce this decision."
+        "REGIMEN_ACTUAL": "State HMM: LOW_VOLATILITY. Stable capital flow. Low-risk regime.",
+        "ESTRES_SISTEMICO": "VIX: 16.59. Z-Score EWM: -0.416σ. Tail risk under control.",
+        "CONTEXTO_HISTORICO": "Historical analogs: 3/5 bullish, 1/5 lateral, 1/5 crisis. Varied behavior patterns.",
+        "CONFIANZA_KNN": "Confianza KNN: 0.904. Distancia media Mahalanobis: 4.892. Calidad de análogos alta.",
+        "DICTAMEN_OPERATIVO": "MAINTAIN EXPOSURE. RISK CONTROLLED.",
+        "SINTESIS_ESTRATEGICA": "Maintain exposure in a low-risk environment. Control capital flow and monitor systemic stress. High confidence in historical analogs supports maintaining current exposure."
     },
-    "deep_analysis": "Mantener exposición en un entorno de bajo riesgo. El régimen actual de bajo volatilidad y el control del riesgo de cola sugieren una estrategia de mantenimiento de posiciones. La confianza en los análogos históricos y la correlación con patrones pasados refuerzan esta decisión.",
+    "deep_analysis": "Mantener exposición en un entorno de bajo riesgo. Controlar el flujo de capital y monitorear el estres sistémico. La confianza en los análogos históricos es alta, lo que respalda la decisión de mantener la exposición actual.",
     "matriz": [
         {
             "id": "ENERGIA",
             "nombre": "Petróleo WTI",
             "ticker": "CL=F",
-            "precio": 69.86,
+            "precio": 67.69,
             "limite_dinamico": 84.915,
             "percentil": 75,
             "estado": "🟢 NOMINAL",
@@ -270,7 +270,7 @@
             "id": "DIVISA",
             "nombre": "Dólar Index",
             "ticker": "DX-Y.NYB",
-            "precio": 101.311,
+            "precio": 101.368,
             "limite_dinamico": 104.72,
             "percentil": 75,
             "estado": "🟢 NOMINAL",
@@ -281,8 +281,8 @@
             "id": "TIPOS",
             "nombre": "Bono USA 10Y",
             "ticker": "^TNX",
-            "precio": 4.418,
-            "limite_dinamico": 4.3666,
+            "precio": 4.475,
+            "limite_dinamico": 4.3696,
             "percentil": 80,
             "estado": "🔴 CRÍTICO",
             "inverse": false,
@@ -292,8 +292,8 @@
             "id": "MATERIAS",
             "nombre": "Oro",
             "ticker": "GC=F",
-            "precio": 3990.7,
-            "limite_dinamico": 3187.7,
+            "precio": 4063.3999,
+            "limite_dinamico": 3206.1,
             "percentil": 75,
             "estado": "🔴 CRÍTICO",
             "inverse": false,
@@ -336,59 +336,59 @@
         },
         {
             "sector": "Utilities",
-            "score": 56.9,
+            "score": 59.2,
             "nivel": "🟡 MEDIO",
             "impacto": "High financial debt burden.",
             "accion": "Debt restructuring."
         },
         {
             "sector": "Construction / R.E.",
-            "score": 56.9,
+            "score": 59.2,
             "nivel": "🟡 MEDIO",
             "impacto": "Total dependence on financing.",
             "accion": "Pipeline review."
         },
         {
             "sector": "Technology",
-            "score": 50.3,
+            "score": 52.3,
             "nivel": "🟡 MEDIO",
             "impacto": "Sensitivity to rates and capital.",
-            "accion": "Optimization of structure."
+            "accion": "Structure optimization."
         },
         {
             "sector": "Discretionary Consumption",
-            "score": 40.4,
+            "score": 41.9,
             "nivel": "🟡 MEDIO",
             "impacto": "Sensitivity to credit and prices.",
             "accion": "Margin adjustment."
         },
         {
-            "sector": "Heavy Industry",
-            "score": 25.5,
+            "sector": "Banking / Financial",
+            "score": 26.3,
             "nivel": "🟢 BAJO",
-            "impacto": "Energy-intensive + financing.",
-            "accion": "Review of CAPEX."
+            "impacto": "Interest margin + credit.",
+            "accion": "NPL monitoring."
         },
         {
-            "sector": "Retail Importer",
-            "score": 23.9,
+            "sector": "Heavy Industry",
+            "score": 25.7,
             "nivel": "🟢 BAJO",
-            "impacto": "Dependence on the dollar.",
+            "impacto": "Energy-intensive + financing.",
+            "accion": "CAPEX review."
+        },
+        {
+            "sector": "Import Retail",
+            "score": 24.6,
+            "nivel": "🟢 BAJO",
+            "impacto": "Dollar dependence.",
             "accion": "Currency hedging."
         },
         {
-            "sector": "Banking / Financial",
-            "score": 23.4,
-            "nivel": "🟢 BAJO",
-            "impacto": "Interest margin + credit.",
-            "accion": "Monitoring of delinquency."
-        },
-        {
             "sector": "Airlines",
-            "score": 12.1,
+            "score": 11.4,
             "nivel": "🟢 BAJO",
             "impacto": "Critical fuel cost.",
-            "accion": "Evaluation of fuel hedges."
+            "accion": "Fuel hedge evaluation."
         },
         {
             "sector": "Transportation / Logistics",
@@ -400,55 +400,55 @@
     ],
     "orden_corporativa": "RÉGIMEN NOMINAL. RIESGO SISTÉMICO CONTROLADO.",
     "informe": {
-        "PULSO_SISTEMICO": "Financial markets in a nominal regime with controlled systemic risk.",
+        "PULSO_SISTEMICO": "Financial markets in a nominal regime with control of systemic risk.",
         "SENAL_NIIN": "STRUCTURAL EXPANSION WITH CONTROLLED RISK",
         "ANALISIS_IA": {
-            "dinamica_z_score": "The Z-Score EWM is at -0.304σ, indicating a decrease in systemic risk.",
-            "umbrales_dinamicos": "Active dynamic thresholds show that the 10Y US Bond and Gold are at critical levels, while WTI Oil and the Dollar Index are at nominal levels.",
-            "conclusion_fortaleza": "The NIIN Analytics system shows consistency in risk assessment, with a nominal regime and controlled systemic risk.",
-            "evolucion_cfo_fase_1": "In T-1, risk was at a level of -0.167σ, with a contraction of risk at time T.",
-            "evolucion_cfo_fase_2": "The actual impact on Treasury and Cash Flow is minimized thanks to controlled systemic risk.",
-            "resumen_ejecutivo": "The NIIN Analytics system demonstrates robustness in asset management, with a precise risk assessment and a controlled nominal regime.",
-            "racional_completo": "The strategy in T vs T-1 focuses on risk minimization, with an emphasis on asset management and continuous evaluation of systemic risk."
+            "dinamica_z_score": "The Z-Score EWM is at -0.416σ, indicating a decrease in systemic risk.",
+            "umbrales_dinamicos": "Active dynamic thresholds show that the USA 10Y Bond and Gold are at critical levels, while WTI Oil and the Dollar Index are within nominal thresholds.",
+            "conclusion_fortaleza": "The NIIN Analytics system shows consistency in risk management, with a nominal regime and control of systemic risk.",
+            "evolucion_cfo_fase_1": "In T-1, systemic risk was at -0.304σ, and in T, it has decreased to -0.416σ, indicating a decrease in risk.",
+            "evolucion_cfo_fase_2": "The real impact on Treasury and Cash Flow is positive, thanks to the control of systemic risk and structural expansion.",
+            "resumen_ejecutivo": "The NIIN Analytics system demonstrates robustness in asset management, with a nominal regime and control of systemic risk.",
+            "racional_completo": "The strategy in T vs T-1 focuses on systemic risk management, with an emphasis on structural expansion and control of critical sectors."
         }
     },
     "auditoria_mercado": {
-        "fecha_t_minus_1": "2026-06-30",
-        "z_score_prev": -0.1669,
-        "delta_z": -0.1376,
+        "fecha_t_minus_1": "2026-07-01",
+        "z_score_prev": -0.3045,
+        "delta_z": -0.112,
         "cambios_exposicion": [
             {
-                "s": "Utilities",
+                "s": "Banca / Financiero",
                 "d": 2.9
+            },
+            {
+                "s": "Utilities",
+                "d": 2.3
             },
             {
                 "s": "Construcción / R.E.",
-                "d": 2.9
-            },
-            {
-                "s": "Tecnología",
-                "d": 2.4
+                "d": 2.3
             }
         ],
         "momentum": "risk contraction"
     },
     "niin_accuracy": {
         "status": "active",
-        "days_tracked": 30,
-        "accuracy_score": 63.3,
-        "aciertos": 19,
+        "days_tracked": 31,
+        "accuracy_score": 64.5,
+        "aciertos": 20,
         "fallos": 11,
-        "current_streak": 1,
+        "current_streak": 2,
         "max_streak": 8,
         "confidence_level": "🟡 FIABILIDAD MEDIA",
         "metrica": "postura_vs_retorno_spx",
         "last_session": {
-            "date": "2026-06-30",
+            "date": "2026-07-01",
             "postura_ayer": "RISK_ON",
-            "spx_ayer": 7354.02,
-            "spx_hoy": 7440.43,
-            "retorno_spx": 1.175,
-            "vix": 17.65,
+            "spx_ayer": 7440.43,
+            "spx_hoy": 7499.36,
+            "retorno_spx": 0.792,
+            "vix": 16.45,
             "mercado": "SUBE",
             "acierto": true,
             "resultado": "✅ CORRECTO"
@@ -783,13 +783,24 @@
                 "mercado": "SUBE",
                 "acierto": true,
                 "resultado": "✅ CORRECTO"
+            },
+            {
+                "date": "2026-07-01",
+                "postura_ayer": "RISK_ON",
+                "spx_ayer": 7440.43,
+                "spx_hoy": 7499.36,
+                "retorno_spx": 0.792,
+                "vix": 16.45,
+                "mercado": "SUBE",
+                "acierto": true,
+                "resultado": "✅ CORRECTO"
             }
         ],
         "accuracy_by_postura": {
             "RISK_ON": {
-                "sesiones": 30,
-                "aciertos": 19,
-                "accuracy": 63.3
+                "sesiones": 31,
+                "aciertos": 20,
+                "accuracy": 64.5
             },
             "RISK_OFF": {
                 "sesiones": 0,
@@ -798,13 +809,13 @@
             }
         },
         "narrativa": {
-            "resumen": "19 correct sessions out of 30 (63.3%) are recorded, with a history under construction that remains in a RISK_ON posture. The discriminative capacity will be activated once evaluable RISK_OFF sessions are available.",
-            "analisis_fallos": "The 11 failures occur in high-volatility sessions, characterized by an average SPX return of 0.828% and an average VIX of 17.67, indicating difficulties in acute stress regimes with abrupt movements.",
+            "resumen": "20 correct sessions out of 31 (64.5%) are recorded, with a history under construction that shows sessions exclusively in a RISK_ON posture. Discriminatory capacity will be activated with the incorporation of evaluable RISK_OFF sessions.",
+            "analisis_fallos": "The 11 failures are concentrated in high-volatility sessions, characterized by an average SPX return of 0.828% and an average VIX of 17.67, indicating difficulties in acute stress regimes with abrupt movements.",
             "valoracion": "NIIN operates with maximum reliability in low-volatility environments (VIX < 17.67), making it an adequate institutional tool for risk management in stable markets.",
             "datos_brutos": {
-                "vix_medio_aciertos": 17.11,
+                "vix_medio_aciertos": 17.08,
                 "vix_medio_fallos": 17.67,
-                "retorno_medio_aciertos": 0.616,
+                "retorno_medio_aciertos": 0.624,
                 "retorno_medio_fallos": 0.828,
                 "patron": "estres_agudo"
             }
@@ -814,7 +825,7 @@
         "cagr": "12.12%",
         "max_dd": "-43.25%",
         "sharpe": "0.815",
-        "total_aum": 2883283514.0,
+        "total_aum": 2877086344.0,
         "period": "2007-09-25 → 2026-05-15",
         "sessions": 4847,
         "cagr_vs_benchmark": "8.88%",
@@ -823,7 +834,7 @@
     "portfolio_breakdown": [
         {
             "name": "Equity L/S",
-            "value": 59.9,
+            "value": 60.0,
             "color": "#8b5cf6"
         },
         {
@@ -4828,10 +4839,6 @@
             "risk": 19.09
         },
         {
-            "date": "2026-02-25",
-            "risk": 17.93
-        },
-        {
             "date": "2026-02-26",
             "risk": 18.63
         },
@@ -5186,6 +5193,10 @@
         {
             "date": "2026-06-30",
             "risk": 16.45
+        },
+        {
+            "date": "2026-07-01",
+            "risk": 16.59
         }
     ],
     "macro_signal_divergence": {
@@ -5197,30 +5208,30 @@
         "alerts_total": 6
     },
     "hmm_allocation_breakdown": {
-        "signal_cash": 0.0009,
+        "signal_cash": 0.0007,
         "hmm_premium": 0.0,
-        "total_cash": 0.0009,
-        "knn_weight": 0.967
+        "total_cash": 0.0007,
+        "knn_weight": 0.9712
     },
     "z_score_context": {
-        "z_score_ewm": -0.3045,
-        "z_score_raw": -0.924,
-        "vix_mean_historical": 19.7694,
-        "vix_std_historical": 8.6873,
+        "z_score_ewm": -0.4165,
+        "z_score_raw": -0.9202,
+        "vix_mean_historical": 19.7688,
+        "vix_std_historical": 8.6866,
         "z_score_interpretation": "NEUTRAL"
     },
     "analog_quality": {
         "n_analogs": 5,
-        "mean_distance": 0.3498,
-        "knn_confidence": 0.8899,
+        "mean_distance": 0.3031,
+        "knn_confidence": 0.9039,
         "cluster_warning": false,
         "temporal_diversity": 5,
         "years_represented": [
             "2008",
             "2009",
-            "2014",
-            "2024",
-            "2025"
+            "2017",
+            "2023",
+            "2024"
         ]
     },
     "audit_flags": {
