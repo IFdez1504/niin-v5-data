@@ -17,18 +17,18 @@
         ],
         "python_version": "3.11.16",
         "platform": "Linux",
-        "run_timestamp_utc": "2026-10-07T02:45:32.413832+00:00",
+        "run_timestamp_utc": "2026-10-08T03:03:42.225214+00:00",
         "hmm_engine": "GaussianHMM",
         "hmm_is_real": true
     },
-    "timestamp": "2026-10-07T02:45:32.413795Z",
+    "timestamp": "2026-10-08T03:03:42.225173Z",
     "version": "NIIN Analytics",
-    "z_score": -0.3616,
-    "z_score_raw": -0.7489,
+    "z_score": -0.4189,
+    "z_score_raw": -0.677,
     "risk_status": "RISK_ON",
     "confidence": {
         "level": "LOW",
-        "knn_score": 0.8483,
+        "knn_score": 0.8477,
         "hmm_state": 2,
         "hmm_label": "SYSTEMIC_STRESS",
         "hmm_type": "GaussianHMM",
@@ -38,9 +38,9 @@
             1.0
         ],
         "hmm_transition_prob_7d": [
-            0.0777,
-            0.1052,
-            0.8171
+            0.0873,
+            0.0934,
+            0.8194
         ],
         "hmm_state_labels": [
             "LOW_VOLATILITY",
@@ -49,31 +49,31 @@
         ],
         "inference_method": "forward_filtered",
         "posterior_max": 1.0,
-        "state_flip_rate": 0.6581,
-        "mean_run_length_days": 1.52,
+        "state_flip_rate": 0.0191,
+        "mean_run_length_days": 52.42,
         "startprob": [
-            1.0,
             0.0,
-            0.0
+            0.0,
+            1.0
         ],
         "transmat_diagonal": [
-            0.0004,
-            0.003,
-            0.9697
+            0.9708,
+            0.9811,
+            0.986
         ]
     },
     "metrics": {
-        "global_z_score_ewm": -0.3616,
-        "global_z_score_raw": -0.7489,
-        "vix_level": 15.01,
-        "spx": 7818.93,
-        "vix_mean": 19.7184,
-        "vix_std": 8.6401,
+        "global_z_score_ewm": -0.4189,
+        "global_z_score_raw": -0.677,
+        "vix_level": 15.08,
+        "spx": 7801.77,
+        "vix_mean": 19.7175,
+        "vix_std": 8.6395,
         "hmm_state": 2,
         "hmm_is_real": true,
-        "knn_confidence": 0.8483,
+        "knn_confidence": 0.8477,
         "regime": "ALCISTA",
-        "sma_200": 7248.02
+        "sma_200": 7252.55
     },
     "system_drivers": [
         {
@@ -94,11 +94,11 @@
     ],
     "action_node": {
         "type": "SYSTEM_SIGNAL_V5",
-        "message": "MAINTAIN EXPOSURE. RISK CONTROLLED.",
+        "message": "MAINTAIN EXPOSURE. CONTROLLED RISK.",
         "allocation": {
-            "cash": 0.0004,
-            "risk": 0.9996,
-            "base_cash": 0.0008,
+            "cash": 0.0003,
+            "risk": 0.9997,
+            "base_cash": 0.0007,
             "hmm_premium": 0.0,
             "knn_weight": 1.0,
             "voltarget_cash_vol": 0.0,
@@ -108,7 +108,7 @@
                 "terms": [
                     {
                         "name": "base_cash",
-                        "value": 0.0008,
+                        "value": 0.0007,
                         "op": "=",
                         "active": true,
                         "detail": "regime=ALCISTA"
@@ -135,7 +135,7 @@
                         "detail": "enabled_blend"
                     }
                 ],
-                "result": 0.0004,
+                "result": 0.0003,
                 "formula": "clip((1-vt_weight)*(base_cash*knn_weight+hmm_premium) + vt_weight*cash_vol, 0, cash_clip_max)",
                 "reconstructible_from_feed": true
             }
@@ -144,27 +144,10 @@
     },
     "analog_intelligence": [
         {
-            "date": "2023-09-01",
-            "distance_mahal": 12.4667,
-            "distance_corr": 0.3727,
-            "distance_combined": 0.4751,
-            "reference": "Post-Inflation Normalization",
-            "market_behavior": "Rate Plateau / Equity Re-rating",
-            "analog_returns": {
-                "spx_base": 4515.77,
-                "retorno_30d": -4.16,
-                "retorno_60d": 0.96,
-                "retorno_90d": 5.49,
-                "max_drawdown_intermedio": -8.82,
-                "tendencia_post": "ALCISTA",
-                "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
-            }
-        },
-        {
             "date": "2025-10-10",
-            "distance_mahal": 12.8899,
-            "distance_corr": 0.3628,
-            "distance_combined": 0.48,
+            "distance_mahal": 13.2925,
+            "distance_corr": 0.3452,
+            "distance_combined": 0.4753,
             "reference": "Market Friction Analog",
             "market_behavior": "Statistical Anomaly Detection",
             "analog_returns": {
@@ -178,10 +161,27 @@
             }
         },
         {
+            "date": "2023-09-01",
+            "distance_mahal": 12.8414,
+            "distance_corr": 0.3773,
+            "distance_combined": 0.4811,
+            "reference": "Post-Inflation Normalization",
+            "market_behavior": "Rate Plateau / Equity Re-rating",
+            "analog_returns": {
+                "spx_base": 4515.77,
+                "retorno_30d": -4.16,
+                "retorno_60d": 0.96,
+                "retorno_90d": 5.49,
+                "max_drawdown_intermedio": -8.82,
+                "tendencia_post": "ALCISTA",
+                "nota": "Retornos calculados sobre dataset certificado SHA-256. Sesiones hábiles."
+            }
+        },
+        {
             "date": "2023-03-22",
-            "distance_mahal": 13.1922,
-            "distance_corr": 0.3721,
-            "distance_combined": 0.4916,
+            "distance_mahal": 13.7473,
+            "distance_corr": 0.3856,
+            "distance_combined": 0.5059,
             "reference": "Post-Inflation Normalization",
             "market_behavior": "Rate Plateau / Equity Re-rating",
             "analog_returns": {
@@ -196,9 +196,9 @@
         },
         {
             "date": "2024-06-11",
-            "distance_mahal": 12.7472,
-            "distance_corr": 0.4278,
-            "distance_combined": 0.5091,
+            "distance_mahal": 13.0868,
+            "distance_corr": 0.4184,
+            "distance_combined": 0.5072,
             "reference": "AI Rally Analog",
             "market_behavior": "Momentum / Concentration Risk",
             "analog_returns": {
@@ -213,9 +213,9 @@
         },
         {
             "date": "2024-01-17",
-            "distance_mahal": 12.8703,
-            "distance_corr": 0.4287,
-            "distance_combined": 0.5124,
+            "distance_mahal": 13.2297,
+            "distance_corr": 0.4171,
+            "distance_combined": 0.5098,
             "reference": "AI Rally Analog",
             "market_behavior": "Momentum / Concentration Risk",
             "analog_returns": {
@@ -232,67 +232,67 @@
     "historical_context": {
         "analog_dates": [
             {
-                "date": "2023-09-01",
-                "distance_mahal": 12.4667,
-                "distance_corr": 0.3727,
-                "distance_combined": 0.4751,
-                "reference": "Post-Inflation Normalization",
-                "market_behavior": "Rate Plateau / Equity Re-rating"
-            },
-            {
                 "date": "2025-10-10",
-                "distance_mahal": 12.8899,
-                "distance_corr": 0.3628,
-                "distance_combined": 0.48,
+                "distance_mahal": 13.2925,
+                "distance_corr": 0.3452,
+                "distance_combined": 0.4753,
                 "reference": "Market Friction Analog",
                 "market_behavior": "Statistical Anomaly Detection"
             },
             {
+                "date": "2023-09-01",
+                "distance_mahal": 12.8414,
+                "distance_corr": 0.3773,
+                "distance_combined": 0.4811,
+                "reference": "Post-Inflation Normalization",
+                "market_behavior": "Rate Plateau / Equity Re-rating"
+            },
+            {
                 "date": "2023-03-22",
-                "distance_mahal": 13.1922,
-                "distance_corr": 0.3721,
-                "distance_combined": 0.4916,
+                "distance_mahal": 13.7473,
+                "distance_corr": 0.3856,
+                "distance_combined": 0.5059,
                 "reference": "Post-Inflation Normalization",
                 "market_behavior": "Rate Plateau / Equity Re-rating"
             },
             {
                 "date": "2024-06-11",
-                "distance_mahal": 12.7472,
-                "distance_corr": 0.4278,
-                "distance_combined": 0.5091,
+                "distance_mahal": 13.0868,
+                "distance_corr": 0.4184,
+                "distance_combined": 0.5072,
                 "reference": "AI Rally Analog",
                 "market_behavior": "Momentum / Concentration Risk"
             },
             {
                 "date": "2024-01-17",
-                "distance_mahal": 12.8703,
-                "distance_corr": 0.4287,
-                "distance_combined": 0.5124,
+                "distance_mahal": 13.2297,
+                "distance_corr": 0.4171,
+                "distance_combined": 0.5098,
                 "reference": "AI Rally Analog",
                 "market_behavior": "Momentum / Concentration Risk"
             }
         ],
-        "knn_confidence": 0.8483,
+        "knn_confidence": 0.8477,
         "distance_metric": "Mahalanobis+Correlation_50/50",
         "pca_components": 15,
         "exclusion_window": 180
     },
     "dictamen_cuantitativo": {
-        "REGIMEN_ACTUAL": "HMM State: SYSTEMIC_STRESS. Net capital outflow. VIX 15.01 indicates moderate volatility. Z-Score EWM -0.362σ signals bearish pressure. Systemic stress regime.",
-        "ESTRES_SISTEMICO": "Z-Score EWM -0.362σ. VIX 15.01, low-moderate level. Elevated tail risk. High asset correlation. Increased probability of extreme events.",
-        "CONTEXTO_HISTORICO": "2023-09-01: post-inflation, 30d -4.16%, 90d +5.49% (bullish). 2025-10-10: market friction, 30d +0.77%, 90d +4.33% (sideways). 2023-03-22: post-inflation rally, 30d +3.91%, 90d +16.0% (rally). 2024-06-11: AI rally, 30d +3.36%, 90d +8.18% (bullish). 2024-01-17: AI rally, 30d +6.97%, 90d +11.98% (bullish).",
-        "CONFIANZA_KNN": "KNN confidence 0.848. Average Mahalanobis distance ≈12.8. High quality, robust analogy.",
+        "REGIMEN_ACTUAL": "HMM indicates SYSTEMIC_STRESS state. VIX 15.08, moderate volatility. Z-Score EWM -0.419σ, slightly bearish signal. Capital flow constrained. Systemic pressure regime.",
+        "ESTRES_SISTEMICO": "Z-Score -0.419σ, descending pressure. VIX 15.08, contained volatility. Moderate tail risk. High correlation among assets. Sustained stress scenario.",
+        "CONTEXTO_HISTORICO": "Five analogues identified. Four with bullish returns over 90 sessions. One sideways, no crisis. Mahalanobis distances between 12.84 and 13.75. References: AI Rally, Post-Inflation Normalization, Market Friction.",
+        "CONFIANZA_KNN": "KNN confidence 0.848. Average distance 13.24 units. High quality, consistent patterns.",
         "DICTAMEN_OPERATIVO": "MAINTAIN EXPOSURE. RISK CONTROLLED.",
-        "SINTESIS_ESTRATEGICA": "The HMM model indicates systemic stress while the VIX remains in a moderate zone. The negative Z-Score reinforces bearish pressure and raises tail risk. Historical analogs show a majority of bullish 90-day returns, with Mahalanobis distances consistent around 13. KNN confidence above 0.84 validates the robustness of the selected patterns. It is recommended to maintain exposure under strict risk control."
+        "SINTESIS_ESTRATEGICA": "The HMM model places the market in a systemic stress regime; implied volatility (VIX 15.08) remains moderate and the Z-Score EWM shows a slight bearish pressure. Historical analogues reveal four bullish episodes and one sideways, no crisis precedents, with Mahalanobis distances around 13 units and support a high KNN confidence (0.848). Tail risk remains moderate and capital flow is constrained. The operational recommendation keeps exposure under risk control."
     },
-    "deep_analysis": "The HMM model indicates systemic stress while the VIX remains in a moderate zone. The negative Z-Score reinforces bearish pressure and raises tail risk. Historical analogs show a majority of bullish 90-day returns, with Mahalanobis distances consistent around 13. KNN confidence above 0.84 validates the robustness of the selected patterns. It is recommended to maintain exposure under strict risk control.",
+    "deep_analysis": "The HMM model places the market in a systemic stress regime; implied volatility (VIX 15.08) remains moderate and the Z-Score EWM shows a slight bearish pressure. Historical analogues reveal four bullish episodes and one sideways, no crisis precedents, with Mahalanobis distances around 13 units and support a high KNN confidence (0.848). Tail risk remains moderate and capital flow is constrained. The operational recommendation keeps exposure under risk control.",
     "matriz": [
         {
             "id": "ENERGIA",
             "nombre": "Petróleo WTI",
             "ticker": "CL=F",
-            "precio": 90.26,
-            "limite_dinamico": 86.44,
+            "precio": 89.89,
+            "limite_dinamico": 86.4825,
             "percentil": 75,
             "estado": "CRÍTICO",
             "inverse": false,
@@ -302,7 +302,7 @@
             "id": "DIVISA",
             "nombre": "Dólar Index",
             "ticker": "DX-Y.NYB",
-            "precio": 102.039,
+            "precio": 102.237,
             "limite_dinamico": 104.72,
             "percentil": 75,
             "estado": "NOMINAL",
@@ -313,8 +313,8 @@
             "id": "TIPOS",
             "nombre": "Bono USA 10Y",
             "ticker": "^TNX",
-            "precio": 5.269,
-            "limite_dinamico": 4.432,
+            "precio": 5.277,
+            "limite_dinamico": 4.4324,
             "percentil": 80,
             "estado": "CRÍTICO",
             "inverse": false,
@@ -324,8 +324,8 @@
             "id": "MATERIAS",
             "nombre": "Oro",
             "ticker": "GC=F",
-            "precio": 4174.7002,
-            "limite_dinamico": 3364.7251,
+            "precio": 4156.6001,
+            "limite_dinamico": 3368.7251,
             "percentil": 75,
             "estado": "CRÍTICO",
             "inverse": false,
@@ -341,68 +341,68 @@
         {
             "sector": "Mining / Commodities",
             "score": 100.0,
-            "nivel": "ALTO",
+            "nivel": "MEDIO",
             "impacto": "Commodities cycle.",
             "accion": "Production adjustment."
         },
         {
             "sector": "Utilities",
-            "score": 95.9,
+            "score": 98.5,
             "nivel": "MEDIO",
             "impacto": "High financial debt load.",
             "accion": "Debt restructuring."
         },
         {
-            "sector": "Construction / Real Estate",
-            "score": 95.9,
+            "sector": "Construction / R.E.",
+            "score": 98.5,
             "nivel": "MEDIO",
-            "impacto": "Full reliance on financing.",
+            "impacto": "Full financing dependence.",
             "accion": "Pipeline review."
         },
         {
             "sector": "Technology",
-            "score": 76.7,
+            "score": 78.8,
             "nivel": "MEDIO",
             "impacto": "Sensitivity to rates and capital.",
             "accion": "Structure optimization."
         },
         {
             "sector": "Heavy Industry",
-            "score": 63.2,
+            "score": 63.5,
             "nivel": "MEDIO",
             "impacto": "Energy intensive + financing.",
             "accion": "CAPEX review."
         },
         {
+            "sector": "Consumer Discretionary",
+            "score": 49.3,
+            "nivel": "MEDIO",
+            "impacto": "Sensitivity to credit and prices.",
+            "accion": "Margin adjustment."
+        },
+        {
             "sector": "Airlines",
-            "score": 49.1,
+            "score": 48.5,
             "nivel": "MEDIO",
             "impacto": "Critical fuel cost.",
             "accion": "Assess fuel hedges."
         },
         {
-            "sector": "Discretionary Consumer",
-            "score": 48.0,
-            "nivel": "MEDIO",
-            "impacto": "Sensitivity to credit and pricing.",
-            "accion": "Margin adjustment."
-        },
-        {
             "sector": "Banking / Financial",
-            "score": 38.8,
+            "score": 39.9,
             "nivel": "MEDIO",
-            "impacto": "Interest margin + credit.",
+            "impacto": "Interest + credit margin.",
             "accion": "Delinquency monitoring."
         },
         {
             "sector": "Transportation / Logistics",
-            "score": 28.3,
+            "score": 27.3,
             "nivel": "MEDIO",
             "impacto": "Pressure on logistics margins.",
             "accion": "Route optimization."
         },
         {
-            "sector": "Importing Retail",
+            "sector": "Retail Importer",
             "score": 0.0,
             "nivel": "BAJO",
             "impacto": "Dollar dependence.",
@@ -411,34 +411,34 @@
     ],
     "orden_corporativa": "RÉGIMEN NOMINAL. RIESGO SISTÉMICO CONTROLADO.",
     "informe": {
-        "PULSO_SISTEMICO": "Market shows moderate pressure. WTI 90.26 exceeds the p75 86.44 (watch point). Dollar Index 102.039 remains below the p75 104.72 (nominal). US 10Y Treasury 5.269 exceeds the p80 4.432 (watch point). Gold 4174.70 exceeds the p75 3364.73 (watch point). Z-Score EWM -0.362σ indicates a downtrend within the nominal regime, systemic risk controlled.",
+        "PULSO_SISTEMICO": "Markets show a slight downside pressure, with the Z-Score EWM at -0.419σ, indicating a nominal stability trend.",
         "ANALISIS_IA": {
-            "dinamica_z_score": "The Z-Score moved from -0.276σ (T-1) to -0.362σ (T), delta -0.086σ, reflecting a downward momentum but contained within the nominal stability framework.",
-            "umbrales_dinamicos": "Watch points are identified in WTI, 10Y Bond and Gold for breaching their respective dynamic percentiles; the Dollar Index remains within the nominal range.",
-            "conclusion_fortaleza": "NIIN Analytics maintains operational consistency, preserving the system's nominal stability amid observed variations.",
-            "evolucion_cfo_fase_1": "In T-1 the Z-Score indicated slight pressure; in T the pressure modestly intensifies, without breaching stability limits. The macro environment remains under controlled monitoring.",
-            "evolucion_cfo_fase_2": "The downward trend of the Z-Score reduces exposure to financing costs; however, watch points in commodities may require hedging adjustments to preserve liquidity and projected cash flow.",
-            "resumen_ejecutivo": "NIIN Analytics demonstrates robustness in asset management, absorbing the Z-Score variation and reference price movements without compromising the nominal stability of the treasury portfolio.",
-            "racional_completo": "Compared T-1 to T, the decline in the Z-Score and the emergence of watch points in key assets indicate a slight reconfiguration of the risk profile. The institutional response focuses on strengthening the monitoring of watch indicators and optimizing the debt structure, ensuring cash-flow continuity within the nominal stability framework."
+            "dinamica_z_score": "The Z-Score EWM declined from -0.362σ in T-1 to -0.419σ in T, reflecting a change of -0.057σ, consistent with downward risk momentum.",
+            "umbrales_dinamicos": "WTI crude oil prices (89.89) and gold (4156.60) exceed their p75 dynamic thresholds, constituting watch points. The Dollar Index remains below its p75 threshold (102.237 < 104.72). The US 10Y bond (5.277) exceeds the p80 threshold, also a watch point.",
+            "conclusion_fortaleza": "NIIN Analytics maintains operational consistency, demonstrating effective systemic risk control under the nominal regime.",
+            "evolucion_cfo_fase_1": "In T-1 risk was in the nominal zone; in T the slight degradation of the Z-Score and the identified watch points indicate a stable evolution without significant deviations.",
+            "evolucion_cfo_fase_2": "The treasury impact translates into a moderate exposure to volatility of critical commodities, without requiring immediate liquidity or hedging adjustments.",
+            "resumen_ejecutivo": "NIIN Analytics demonstrates robustness in asset management, keeping exposure within nominal stability parameters.",
+            "racional_completo": "Compared T-1 and T, the decline in the Z-Score and the emergence of watch points in WTI, gold and 10Y reflect a controlled downward pressure; the hedging policy and cash position remain aligned with stability objectives."
         },
         "SENAL_NIIN": "NOMINAL STABILITY"
     },
     "auditoria_mercado": {
-        "fecha_t_minus_1": "2026-10-06",
-        "z_score_prev": -0.2755,
-        "delta_z": -0.0861,
+        "fecha_t_minus_1": "2026-10-07",
+        "z_score_prev": -0.3616,
+        "delta_z": -0.0573,
         "cambios_exposicion": [
             {
                 "s": "Utilities",
-                "d": -4.1
+                "d": 2.6
             },
             {
                 "s": "Construcción / R.E.",
-                "d": -4.1
+                "d": 2.6
             },
             {
                 "s": "Tecnología",
-                "d": -3.3
+                "d": 2.1
             }
         ],
         "momentum": "risk_downward"
@@ -446,47 +446,47 @@
     "niin_accuracy": {
         "status": "active",
         "live_performance": {
-            "sessions_evaluated": 82,
-            "cum_return_niin": 2.8753,
-            "cum_return_benchmark": 3.1987,
-            "excess_return": -0.3235,
+            "sessions_evaluated": 83,
+            "cum_return_niin": 3.4702,
+            "cum_return_benchmark": 3.7958,
+            "excess_return": -0.3256,
             "max_drawdown_niin": -4.227,
             "max_drawdown_benchmark": -4.3527,
             "drawdown_advantage_pp": 0.1257,
-            "mean_exposure": 0.9872,
+            "mean_exposure": 0.9873,
             "min_exposure": 0.8998,
             "sessions_defensive": 24,
             "measures_protection": true
         },
         "directional": {
-            "hit_rate": 48.8,
-            "up_day_base_rate": 48.8,
-            "ci95_low": 38.3,
-            "ci95_high": 59.4,
+            "hit_rate": 49.4,
+            "up_day_base_rate": 49.4,
+            "ci95_low": 38.9,
+            "ci95_high": 59.9,
             "posture_constant": true,
             "informative": false,
             "why_not_informative": "Postura constante en todas las sesiones evaluadas: la tasa de acierto coincide por construcción con la fracción de sesiones alcistas del índice y no mide capacidad discriminante."
         },
-        "days_tracked": 82,
-        "accuracy_score": 48.8,
-        "aciertos": 40,
+        "days_tracked": 83,
+        "accuracy_score": 49.4,
+        "aciertos": 41,
         "fallos": 42,
-        "current_streak": 2,
+        "current_streak": 3,
         "max_streak": 8,
         "confidence_level": "NO INFORMATIVA - postura constante, la tasa mide al índice",
         "metrica": "postura_vs_retorno_spx",
         "last_session": {
-            "date": "2026-10-06",
+            "date": "2026-10-07",
             "postura_ayer": "RISK_ON",
-            "spx_ayer": 7722.72,
-            "spx_hoy": 7773.95,
-            "retorno_spx": 0.6634,
-            "vix": 15.52,
+            "spx_ayer": 7773.95,
+            "spx_hoy": 7818.93,
+            "retorno_spx": 0.5786,
+            "vix": 15.01,
             "mercado": "SUBE",
             "acierto": true,
             "resultado": "CORRECTO",
             "exposicion_ayer": 0.9995,
-            "retorno_overlay": 0.663,
+            "retorno_overlay": 0.5783,
             "delta_vs_indice": -0.0003
         },
         "session_history": [
@@ -1637,13 +1637,27 @@
                 "exposicion_ayer": 0.9995,
                 "retorno_overlay": 0.663,
                 "delta_vs_indice": -0.0003
+            },
+            {
+                "date": "2026-10-07",
+                "postura_ayer": "RISK_ON",
+                "spx_ayer": 7773.95,
+                "spx_hoy": 7818.93,
+                "retorno_spx": 0.5786,
+                "vix": 15.01,
+                "mercado": "SUBE",
+                "acierto": true,
+                "resultado": "CORRECTO",
+                "exposicion_ayer": 0.9995,
+                "retorno_overlay": 0.5783,
+                "delta_vs_indice": -0.0003
             }
         ],
         "accuracy_by_postura": {
             "RISK_ON": {
-                "sesiones": 82,
-                "aciertos": 40,
-                "accuracy": 48.8
+                "sesiones": 83,
+                "aciertos": 41,
+                "accuracy": 49.4
             },
             "RISK_OFF": {
                 "sesiones": 0,
@@ -1652,13 +1666,13 @@
             }
         },
         "narrativa": {
-            "resumen": "Across 82 evaluated sessions, the overlay shows an excess of -0.32 % versus the index, with a maximum decline of +0.13 percentage points. The directional accuracy rate is 48.8 %, identical to the index's bullish session percentage, indicating that under the constant RISK_ON stance the metric does not capture discriminative ability. The system's distinctive function can only be assessed when RISK_OFF sessions occur.",
-            "analisis_fallos": "The directional accuracy criterion requires being in a defensive position on every down day, penalizing proper risk management; a system that averts a crisis but loses some rebounds would score near 50 %. The 42 missed sessions correspond to days with negative SPX return while the model maintained RISK_ON exposure, which in a low-volatility environment is recorded as a failure even though the stance was correct. This metric reflects daily market directionality, not the model's predictive capability, and is limited by the base rate of bullish days.",
-            "valoracion": "The current track record reflects the system's performance in a single regime - low volatility and full exposure - which differs from the scenario for which it was designed. Its distinctive function, reducing exposure under systemic stress, has not yet been tested in real conditions and will be evaluated in the first defensive session. Therefore, the history documents operational consistency, not discriminative capability.",
+            "resumen": "Across 83 evaluated sessions, the overlay shows an excess of -0.33 % versus the index and a maximum drawdown of +0.13 p.p. The directional hit rate is 49.4 %, identical to the 49.4 % of bullish sessions of the index, reflecting structural coincidence under a RISK_ON stance. The system's distinctive capability can only be appreciated when evaluable RISK_OFF sessions exist.",
+            "analisis_fallos": "The directional hit criterion requires defense on every down day, penalizing correct risk management; therefore, the primary metric is the overlay curve. The 42 missed sessions correspond to days of negative SPX return with RISK_ON exposure, indicating that the measure captures daily market directionality, not model predictivity. In low-volatility regimes, any down day is counted as a miss, capping the rate at the baseline percentage of up days.",
+            "valoracion": "The current track record reflects the system's performance in a single low-volatility, full-exposure regime, without testing its distinctive function of exposure reduction under systemic stress. The first defensive session will be the definitive test of that capability. Until then, the record documents operational consistency, not predictive discrimination.",
             "datos_brutos": {
-                "vix_medio_aciertos": 16.45,
+                "vix_medio_aciertos": 16.41,
                 "vix_medio_fallos": 16.68,
-                "retorno_medio_aciertos": 0.673,
+                "retorno_medio_aciertos": 0.671,
                 "retorno_medio_fallos": -0.56,
                 "patron": null
             }
@@ -1668,7 +1682,7 @@
         "cagr": "8.08%",
         "max_dd": "-48.60%",
         "sharpe": "0.574",
-        "total_aum": 3011037482.0,
+        "total_aum": 3004431220.0,
         "period": "2007-09-25 → 2026-06-09",
         "sessions": 4864,
         "cagr_vs_benchmark": "8.83%",
@@ -5741,10 +5755,6 @@
             "risk": 15.32
         },
         {
-            "date": "2026-06-03",
-            "risk": 16.06
-        },
-        {
             "date": "2026-06-04",
             "risk": 15.4
         },
@@ -6099,16 +6109,20 @@
         {
             "date": "2026-10-06",
             "risk": 15.01
+        },
+        {
+            "date": "2026-10-07",
+            "risk": 15.08
         }
     ],
     "risk_position": {
         "window_19y": {
-            "z_score": -0.536,
-            "percentile": 31
+            "z_score": -0.528,
+            "percentile": 32
         },
         "window_90d": {
-            "z_score": -0.769,
-            "percentile": 23
+            "z_score": -0.695,
+            "percentile": 26
         }
     },
     "macro_signal_divergence": {
@@ -6120,22 +6134,22 @@
         "alerts_total": 4
     },
     "hmm_allocation_breakdown": {
-        "signal_cash": 0.0008,
+        "signal_cash": 0.0007,
         "hmm_premium": 0.0,
-        "total_cash": 0.0004,
+        "total_cash": 0.0003,
         "knn_weight": 1.0
     },
     "z_score_context": {
-        "z_score_ewm": -0.3616,
-        "z_score_raw": -0.7489,
-        "vix_mean_historical": 19.7184,
-        "vix_std_historical": 8.6401,
+        "z_score_ewm": -0.4189,
+        "z_score_raw": -0.677,
+        "vix_mean_historical": 19.7175,
+        "vix_std_historical": 8.6395,
         "z_score_interpretation": "NEUTRAL"
     },
     "analog_quality": {
         "n_analogs": 5,
-        "mean_distance": 0.4936,
-        "knn_confidence": 0.8483,
+        "mean_distance": 0.4959,
+        "knn_confidence": 0.8477,
         "cluster_warning": false,
         "temporal_diversity": 3,
         "years_represented": [
@@ -6195,6 +6209,6 @@
             "^N225",
             "^TYX"
         ],
-        "sessions": 5138
+        "sessions": 5139
     }
 }
